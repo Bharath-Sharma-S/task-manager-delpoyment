@@ -21,6 +21,8 @@ connectDB();
 
 app.use(express.json());
 //routes
+
+
 app.use("/api/auth", authRouter);
 app.use("/api/users", userRouter);
 app.use("/api/tasks", taskRouter);
@@ -28,12 +30,12 @@ app.use("/api/reports", reportRouter);
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-app.get("/",(req,res)=> {
-  res.json({
+app.get('/',(req,res)=> {
+  return res.json({
     message:"Deployment done successFully"
   })
 })
-//const PORT = process.env.PORT || 3000;
+// const PORT = process.env.PORT || 3000;
 
 // app.listen(PORT, () => {
 //   console.log(`Server running at http://localhost:${PORT}/`);
@@ -41,4 +43,4 @@ app.get("/",(req,res)=> {
 
 
 
-module.exports = app;
+//module.exports = app;
