@@ -28,7 +28,7 @@ app.use("/api/reports", reportRouter);
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-app.use("/",(req,res)=> {
+app.get("/",(req,res)=> {
   res.json({
     message:"Deployment done successFully"
   })
