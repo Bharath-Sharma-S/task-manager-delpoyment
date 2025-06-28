@@ -28,6 +28,11 @@ app.use("/api/reports", reportRouter);
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
+app.use("/",(req,res)=> {
+  res.json({
+    message:"Deployment done successFully"
+  })
+})
 //const PORT = process.env.PORT || 3000;
 
 // app.listen(PORT, () => {
